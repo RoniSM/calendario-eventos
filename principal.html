@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário de Eventos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calendário de Eventos</h1>
+        <div id="calendar"></div>
+        <div id="eventForm">
+            <h2 id="formTitle">Adicionar Novo Evento</h2>
+            <form id="addEventForm">
+                <label for="tituloEvento">Título:</label>
+                <input type="text" id="tituloEvento" name="tituloEvento" required>
+                <label for="dataEvento">Data:</label>
+                <input type="date" id="dataEvento" name="dataEvento" required>
+                <label for="horaEvento">Horário:</label>
+                <input type="time" id="horaEvento" name="horaEvento">
+                <label for="descricaoEvento">Descrição:</label>
+                <textarea id="descricaoEvento" name="descricaoEvento"></textarea>
+                <button type="submit" id="submitButton">Adicionar Evento</button>
+            </form>
+        </div>
+        <div id="listaEventos">
+            <h2>Eventos Agendados</h2>
+            <tr>Titulo</tr>
+            <td>Data</td>
+            <td>Horário</td>
+            <td>Descrição</td>
+            <ul id="eventos"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
